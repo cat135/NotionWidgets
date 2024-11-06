@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+  <style>
+    :root {
+      --blue: #809bce;
+      --blue-accent: #5c6f94;
+      --orange: #d35400;
+      --orange-accent: #9e4102;
+    }
+
+    button {
+      background: none;
+      color: inherit;
+      border: none;
+      padding: 0;
+      font: inherit;
+      cursor: pointer;
+      outline: inherit;
+    }
+
+    .btn {
+      text-align: center;
+      color: #ffffff;
+      font-family: 'Manrope', sans-serif;
+      display: inline-block;
+      margin: 10px;
+      border-radius: 8px;
+    }
+
+    .mid {
+      padding: 10px 40px;
+      font-size: 12px;
+    }
+
+    .threeD {
+      box-shadow: 0px 4px 0px var(--orange-accent);
+      transition: box-shadow 0.1s ease;
+    }
+
+    .threeD:active {
+      box-shadow: 0 0;
+      background-color: var(--orange-accent);
+    }
+
+    /* Orange button color and hover effect */
+    .orange {
+      background-color: var(--orange);
+    }
+
+    .orange:hover {
+      background-color: var(--orange-accent);
+    }
+
+    .orange.threeD {
+      box-shadow: 0px 4px 0px var(--orange-accent);
+    }
+
+    .orange.threeD:active {
+      box-shadow: 0 0;
+      background-color: var(--orange-accent);
+    }
+  </style>
+</head>
+
+<body>
+  <button class="btn mid orange threeD" type="button" onclick="navigate()">
+    <i class="fa-solid fa-user-plus"></i> 2개월 무료 이용 혜택 받기
+  </button>
+  
+  <script>
+    function navigate() {
+      window.open("https://forms.gle/J5yidqe5p9NxJGSj6", "_parent").focus();
+    }
+  </script>
+</body>
+</html>
