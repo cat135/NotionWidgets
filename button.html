@@ -7,6 +7,8 @@
     :root {
       --blue: #809bce;
       --blue-accent: #5c6f94;
+      --orange: #d35400;
+      --orange-accent: #9e4102;
     }
 
     button {
@@ -22,7 +24,6 @@
     .btn {
       text-align: center;
       color: #ffffff;
-      background-color: var(--blue);
       font-family: 'Manrope', sans-serif;
       display: inline-block;
       margin: 10px;
@@ -35,23 +36,37 @@
     }
 
     .threeD {
-      box-shadow: 0px 4px 0px var(--blue-accent);
+      box-shadow: 0px 4px 0px var(--orange-accent);
       transition: box-shadow 0.1s ease;
     }
 
     .threeD:active {
       box-shadow: 0 0;
-      background-color: var(--blue-accent);
+      background-color: var(--orange-accent);
     }
 
-    .btn:hover {
-      background-color: var(--blue-accent);
+    /* Orange button color and hover effect */
+    .orange {
+      background-color: var(--orange);
+    }
+
+    .orange:hover {
+      background-color: var(--orange-accent);
+    }
+
+    .orange.threeD {
+      box-shadow: 0px 4px 0px var(--orange-accent);
+    }
+
+    .orange.threeD:active {
+      box-shadow: 0 0;
+      background-color: var(--orange-accent);
     }
   </style>
 </head>
 
 <body>
-  <button class="btn mid threeD" type="button" onclick="navigate()">
+  <button class="btn mid orange threeD" type="button" onclick="navigate()">
     <i class="fa-solid fa-user-plus"></i> Claim 2 Months Free
   </button>
   
